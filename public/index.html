@@ -31,7 +31,7 @@
   </head>
   <body>
     <h1>Submit Your Quote</h1>
-    <form action="/api/submit-quote" method="POST">
+    <form action="https://hfibgruupd.execute-api.us-east-1.amazonaws.com/prod/api/submit-quote" method="POST">
       <textarea
         name="quote"
         rows="4"
@@ -49,7 +49,7 @@
       async function fetchQuotes() {
         const container = document.getElementById("quotes-container");
         try {
-          const response = await fetch("/api/quotes");
+          const response = await fetch("https://hfibgruupd.execute-api.us-east-1.amazonaws.com/prod/api/quotes");
           const quotes = await response.json();
           if (quotes.length === 0) {
             container.innerHTML =
