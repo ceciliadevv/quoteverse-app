@@ -9,7 +9,7 @@ const port = 8080;
 
 // Konfigurasi AWS SDK
 // Ganti region jika Anda menggunakan region selain ap-southeast-1
-AWS.config.update({ region: "ap-southeast-1" });
+AWS.config.update({ region: "us-east-1" });
 
 // Inisialisasi DynamoDB Document Client
 const dynamoDB = new AWS.DynamoDB.DocumentClient();
